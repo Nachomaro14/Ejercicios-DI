@@ -12,14 +12,13 @@ public class DataChooser extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         btnLeerFecha = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, -1));
 
         btnLeerFecha.setText("Leer fecha");
         btnLeerFecha.addActionListener(new java.awt.event.ActionListener() {
@@ -28,6 +27,7 @@ public class DataChooser extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnLeerFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
+        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
