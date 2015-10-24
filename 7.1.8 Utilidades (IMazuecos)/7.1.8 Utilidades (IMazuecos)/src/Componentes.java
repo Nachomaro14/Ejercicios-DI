@@ -1,4 +1,3 @@
-
 import java.awt.Toolkit;
 import java.awt.event.ItemEvent;
 import java.awt.event.KeyAdapter;
