@@ -988,6 +988,7 @@ public class Componentes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Escribimos aquí los métodos de los botones del layout Border
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         int v = barra.getValue();
@@ -1037,6 +1038,8 @@ public class Componentes extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    //Escribimos aquí los métodos del layout Box
+    //Estos métodos solo ejecutarán la escritura del número respectivo en el TextField y ejecutarán automáticamente la multiplicación
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
         num1.setText("4");
@@ -1324,6 +1327,7 @@ public class Componentes extends javax.swing.JFrame {
         gridbag.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    //Escribimos aquí los nombres que vamos a querer que aparezcan en el label al seleccionar los botones del GridBag
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
         // TODO add your handling code here:
         pulsado.setText("Gilgamesh");
