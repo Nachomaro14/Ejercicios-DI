@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.AbstractListModel;
 import javax.swing.DefaultListModel;
@@ -24,6 +25,8 @@ public class Componentes extends javax.swing.JFrame {
     private AbstractListModel modelo2;
     public ArrayList<String> lista = new ArrayList<>();
     public Componentes(){
+        Toolkit t = Toolkit.getDefaultToolkit();
+        setIconImage(t.getImage(getClass().getResource("logo.png")));
         modelo1 = new DefaultListModel();
         modelo2 = new AbstractListModel() {
             
@@ -68,13 +71,23 @@ public class Componentes extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -97,13 +110,12 @@ public class Componentes extends javax.swing.JFrame {
 
         jLabel1.setText("Objeto seleccionado:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, 20));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 260, 20));
 
         jLabel3.setText("DEFAULT LIST MODEL");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         jLabel4.setText("ABSTRACT LIST MODEL");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
 
         jList2.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -117,11 +129,71 @@ public class Componentes extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 380, 180));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 380, 180));
 
         jLabel5.setText("Objeto seleccionado:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, -1, 20));
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 260, 20));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, -1, 20));
+
+        jLabel7.setText("Índice:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 530, -1, 20));
+
+        jLabel9.setText("Índice:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, 20));
+
+        jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+
+        jButton2.setText("Eliminar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+
+        jButton3.setText("Agregar con índice");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
+
+        jButton4.setText("Agregar");
+        jButton4.setEnabled(false);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, -1, -1));
+
+        jButton5.setText("Eliminar");
+        jButton5.setEnabled(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, -1, -1));
+
+        jButton6.setText("Agregar con índice");
+        jButton6.setEnabled(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 560, -1, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 110, -1));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 100, -1));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 530, 110, -1));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, 100, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,7 +203,7 @@ public class Componentes extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 607, Short.MAX_VALUE)
         );
 
         pack();
@@ -140,17 +212,75 @@ public class Componentes extends javax.swing.JFrame {
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
         // TODO add your handling code here:
         if(jList1.getSelectedValue() != null){
-            jLabel2.setText(jList1.getSelectedValue().toString());
+            jTextField1.setText(jList1.getSelectedValue().toString());
+            jTextField2.setText(String.valueOf(jList1.getSelectedIndex() + 1));
         }
     }//GEN-LAST:event_jList1MouseClicked
 
     private void jList2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MouseClicked
         // TODO add your handling code here:
         if(jList2.getSelectedValue() != null){
-            jLabel6.setText(jList2.getSelectedValue().toString());
+            jTextField3.setText(jList2.getSelectedValue().toString());
+            jTextField4.setText(String.valueOf(jList2.getSelectedIndex() + 1));
         }
     }//GEN-LAST:event_jList2MouseClicked
 
+    
+    //Aquí implementamos los métodos de los botones de Agregar, Eliminar y Agregar con índice de la primera lista
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String s = jTextField1.getText();
+        DefaultListModel dl = (DefaultListModel) jList1.getModel();
+        dl.addElement(s);
+        jList1.setModel(dl);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int i = jList1.getSelectedIndex();
+        DefaultListModel dl = (DefaultListModel) jList1.getModel();
+        dl.remove(i);
+        jList1.setModel(dl);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        String s = jTextField1.getText();
+        int i = Integer.parseInt(jTextField2.getText()) - 1;
+        DefaultListModel dl = (DefaultListModel) jList1.getModel();
+        dl.add(i, s);
+        jList1.setModel(dl);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    
+    //Aquí implementamos los métodos de los botones de Agregar, Eliminar y Agregar con índice de la segunda lista
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        String s = jTextField3.getText();
+        AbstractListModel dl = (AbstractListModel) jList2.getModel();
+        //Aquí debe ir el método fireIntervalAdded, pero no consigo escribirlo en condiciones, lo mantendremos inhabilitado
+        jList2.setModel(dl);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        String s = jTextField3.getText();
+        int i = Integer.parseInt(jTextField4.getText()) - 1;
+        AbstractListModel dl = (AbstractListModel) jList2.getModel();
+        //Aquí debe ir el método fireIntervalRemoved, pero no consigo escribirlo en condiciones, lo mantendremos inhabilitado
+        jList2.setModel(dl);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        String s = jTextField3.getText();
+        int i = Integer.parseInt(jTextField4.getText()) - 1;
+        AbstractListModel dl = (AbstractListModel) jList2.getModel();
+        //Aquí debe ir el método fireIntervalAdded, pero no consigo escribirlo en condiciones, lo mantendremos inhabilitado
+        jList2.setModel(dl);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -191,16 +321,26 @@ public class Componentes extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    public javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     public javax.swing.JList jList1;
     public javax.swing.JList jList2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
