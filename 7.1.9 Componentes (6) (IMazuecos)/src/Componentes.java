@@ -107,15 +107,15 @@ public class Componentes extends javax.swing.JFrame {
         jPanel2.add(jLabel2);
         jPanel2.add(filler7);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nacho\\Pictures\\carta.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carta.png"))); // NOI18N
         jPanel2.add(jLabel3);
         jPanel2.add(filler8);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nacho\\Pictures\\carta.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carta.png"))); // NOI18N
         jPanel2.add(jLabel4);
         jPanel2.add(filler9);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nacho\\Pictures\\carta.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carta.png"))); // NOI18N
         jPanel2.add(jLabel5);
         jPanel2.add(filler10);
 

@@ -84,6 +84,7 @@ public class DemoViewPort {
                 
                 InputMap inputMap = viewport.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
                 ActionMap actionMap = viewport.getActionMap();
+                
                 Action upKeyAction = new AccionMover(viewport, DISMINUIR, Y_AXIS, UNIDAD);
                 KeyStroke upKey = KeyStroke.getKeyStroke("UP");
                 inputMap.put(upKey, "up");
@@ -107,7 +108,7 @@ public class DemoViewPort {
                 actionMap.put("right", rightKeyAction);
                 
                 frame.add(viewport, BorderLayout.CENTER);
-                frame.pack();
+                frame.setSize(500, 500);
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
